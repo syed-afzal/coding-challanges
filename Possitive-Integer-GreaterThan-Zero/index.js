@@ -14,4 +14,4 @@ function solution(A) {
   // write your code in JavaScript (Node.js 8.9.4)
 }
 
-console.log(solution([1,3,6,4,1,2]));
+console.log(solution([-2,-1]));
