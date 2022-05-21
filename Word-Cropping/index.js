@@ -1,8 +1,8 @@
-function sum(arr) {
+const sum = (arr) => {
   return arr.reduce((a,b) => a+b, 0)
 }
 
-function sort(arr) {
+const sort = (arr) => {
   return arr.sort().reverse();
 }
 
