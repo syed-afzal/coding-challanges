@@ -6,7 +6,7 @@ const sort = (arr) => {
   return arr.sort().reverse();
 }
 
-function solution(P, S) {
+const solution = (P, S) => {
   let peopleSum = sum(P);
   let carSort = sort(S);
   let idx = 0;
