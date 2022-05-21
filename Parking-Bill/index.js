@@ -6,7 +6,7 @@ const calculateParkingBill = (E, L) => {
   return 2 + 3 + (hoursDiff >= 1 ? ((hoursDiff - 1) * 4) : 0) + (hoursDiff >= 1 && minutesDiff > 1 ? 4 : 0);
 }
 console.log(calculateParkingBill("10:00", "13:21"))
-// console.log(calculateParkingBill("10:00", "10:01"))
+console.log(calculateParkingBill("10:00", "10:01"))
 // console.log(calculateParkingBill("10:00", "10:45"))
 // console.log(calculateParkingBill("17:00", "18:48"))
 
