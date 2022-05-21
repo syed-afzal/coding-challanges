@@ -7,7 +7,7 @@ const calculateParkingBill = (E, L) => {
 }
 console.log(calculateParkingBill("10:00", "13:21"))
 console.log(calculateParkingBill("10:00", "10:01"))
-// console.log(calculateParkingBill("10:00", "10:45"))
+console.log(calculateParkingBill("10:00", "10:45"))
 // console.log(calculateParkingBill("17:00", "18:48"))
 
 
