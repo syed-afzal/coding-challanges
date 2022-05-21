@@ -16,6 +16,7 @@ const BinaryGap = (N) => {
       currentGap++;
     else {
       maxGap = currentGap > maxGap ? currentGap : maxGap;
+      currentGap = 0;
     }
   }
   return maxGap;
