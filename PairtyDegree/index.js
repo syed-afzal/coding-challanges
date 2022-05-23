@@ -5,3 +5,5 @@ const solution = (N) => {
   }
   return K;
 }
+
+console.log(solution(8));
