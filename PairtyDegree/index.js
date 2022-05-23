@@ -7,3 +7,5 @@ const solution = (N) => {
 }
 
 console.log(solution(8));
+console.log(solution(24));
+// console.log(solution(8));
