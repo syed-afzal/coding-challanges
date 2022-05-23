@@ -14,3 +14,4 @@ const solution = (message, K) => {
 };
 
 console.log(solution('Codility We test coders', 14));
+console.log(solution('Codility We test coders', 14));
