@@ -16,3 +16,4 @@ const solution = (message, K) => {
 
 console.log(solution('Codility We test coders', 14));
 console.log(solution('The quick brown fox jumps over the lazy dog', 39));
+console.log(solution('The quick brown fox jumps over the lazy dog', 39));
