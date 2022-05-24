@@ -26,3 +26,4 @@ const solution = (A, B) => {
   return result;
 };
 console.log(solution(1,4))
+console.log(solution(3,4))
