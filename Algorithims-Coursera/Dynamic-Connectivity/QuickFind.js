@@ -35,3 +35,4 @@ qf.union(7,2);
 qf.union(6,1);
 console.log(qf.array);
 console.log(qf.connected(3,9))
+console.log(qf.connected(1,5))
