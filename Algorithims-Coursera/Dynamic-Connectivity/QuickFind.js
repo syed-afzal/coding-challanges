@@ -6,6 +6,10 @@ class QuickFind {
     }
   }
 
-  get
+  get array() {
+    return this.id;
+  }
 }
+
+const qf = new QuickFind(10);
 
