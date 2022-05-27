@@ -66,3 +66,9 @@ const undoRedo = object => {
     }
   };
 };
+let obj = undoRedo({
+  a: 1,
+  b: 2,
+  c: 3
+});
+console.log(obj.get('a'));
