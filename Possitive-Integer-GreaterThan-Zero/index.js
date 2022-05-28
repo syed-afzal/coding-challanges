@@ -16,3 +16,4 @@ function solution(A) {
 
 console.log(solution([-2,-1]));
 console.log(solution([1,3,1]));
+console.log(solution([1,3,1,4,5,6]));
