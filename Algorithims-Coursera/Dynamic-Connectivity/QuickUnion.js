@@ -10,16 +10,9 @@ class QuickFind {
     return this.id;
   }
 
-  connected(p, q) {
-    return this.id[p] === this.id[q];
-  }
-
-  union(p, q) {
-    let pid = this.id[p];
-    let qid = this.id[q];
-    for(let i=0; i<this.id.length; i++) {
-      if(this.id[i] === pid) this.id[i] = qid
-    }
+   root(i) {
+    while (i !== this.id[i]) i = this.id[i];
+    return i;
   }
 }
 
