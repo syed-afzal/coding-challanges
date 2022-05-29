@@ -18,18 +18,17 @@ class QuickFind {
   connected(p,q) {
     return this.root(p) === this.root(q);
   }
+
+  union(p,q) {
+    const rootP = this.root(p);
+    const rootQ = this.root(q);
+    this.id[rootP] = rootQ;
+  }
 }
 
 const qf = new QuickFind(10);
-qf.union(4,3);
-// console.log(qf.array);
-qf.union(3,8);
-qf.union(6,5);
-qf.union(9,4);
-qf.union(2,1);
-qf.union(5,0);
-qf.union(7,2);
-qf.union(6,1);
 console.log(qf.array);
-console.log(qf.connected(3,9))
-console.log(qf.connected(1,5))
+qf.union(4,3);
+qf.union(3,8);
+qf.union(9,4);
+console.log(qf.array);
