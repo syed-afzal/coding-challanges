@@ -14,6 +14,10 @@ class QuickFind {
     while (i !== this.id[i]) i = this.id[i];
     return i;
   }
+
+  connected(p,q) {
+    return this.root(p) === this.root(q);
+  }
 }
 
 const qf = new QuickFind(10);
