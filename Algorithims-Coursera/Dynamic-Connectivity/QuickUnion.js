@@ -1,4 +1,4 @@
-class QuickFind {
+class QuickUnion {
   constructor(N) {
     this.id = [];
     for (let i = 0; i < N; i++) {
@@ -26,7 +26,7 @@ class QuickFind {
   }
 }
 
-const qf = new QuickFind(10);
+const qf = new QuickUnion(10);
 console.log(qf.array);
 qf.union(4,3);
 qf.union(3,8);
