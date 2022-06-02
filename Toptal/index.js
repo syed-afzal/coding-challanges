@@ -22,7 +22,7 @@ const solution = (arr) => {
   return output;
 }
 
-// console.log(solution(["P>E","E>R","R>U"])); // PERU
+console.log(solution(["P>E","E>R","R>U"])); // PERU
 // console.log(solution(["I>N","A>I","P>A","S>P"])); // SPAIN
 // console.log(solution(["I>F", "W>I", "S>W", "F>T"]));
 // console.log(solution(["R>T", "A>L", "P>O", "O>R", "G>A", "T>U", "U>G"])) // PORTUGAL
