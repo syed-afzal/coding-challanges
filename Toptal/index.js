@@ -19,7 +19,7 @@ const solution = (arr) => {
       }
     }
   }
-  console.log(output);
+  return output;
 }
 
 // console.log(solution(["P>E","E>R","R>U"])); // PERU
