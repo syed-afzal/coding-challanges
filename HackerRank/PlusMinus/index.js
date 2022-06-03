@@ -10,4 +10,4 @@ function plusMinus(arr) {
   console.log(((length - (positive+negative))/length).toFixed(6))
 }
 
-plusMinus([-4,3,-9])
+plusMinus([-4,3,-9,0,4,1])
