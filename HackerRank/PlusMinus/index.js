@@ -11,3 +11,4 @@ function plusMinus(arr) {
 }
 
 plusMinus([-4,3,-9,0,4,1])
+plusMinus([1,1,0,-1,-1])
