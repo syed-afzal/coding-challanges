@@ -11,10 +11,11 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
       appleCount = (val >= s && val <= t) ? (appleCount+1) : appleCount
     }
     if(oranges[i]) {
-      val = a + oranges[i];
+      val = b + oranges[i];
       orangeCount = (val >= s && val <= t) ? (orangeCount+1) : orangeCount
     }
   }
   console.log(appleCount);
   console.log(orangeCount);
 }
+countApplesAndOranges(2,3,1,5,[2], [-2])
