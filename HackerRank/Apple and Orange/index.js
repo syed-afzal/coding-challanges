@@ -1,4 +1,4 @@
-function countApplesAndOranges(s, t, a, b, apples, oranges) {
+const countApplesAndOranges = (s, t, a, b, apples, oranges) => {
   // Write your code here
   const length = apples.length > oranges.length ? apples.length : oranges.length;
   let appleCount = 0;
