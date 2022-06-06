@@ -18,4 +18,4 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
   console.log(appleCount);
   console.log(orangeCount);
 }
-countApplesAndOranges(2,3,1,5,[2], [-2])
+countApplesAndOranges(7,11,1,5,[2], [-2])
