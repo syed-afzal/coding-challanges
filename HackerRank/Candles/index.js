@@ -1,5 +1,5 @@
-const numberOfCandles = (arr) => {
-  const max = Math.max(...arr);
-  let count = arr.filter(c);
+const numberOfCandles = (candles) => {
+  const max = Math.max(...candles);
+  let count = candles.filter(c);
 }
 
