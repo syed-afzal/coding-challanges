@@ -4,3 +4,4 @@ const numberOfCandles = (candles) => {
 }
 
 console.log(numberOfCandles([1,3,2,3]));
+console.log(numberOfCandles([4,4,3,1]));
