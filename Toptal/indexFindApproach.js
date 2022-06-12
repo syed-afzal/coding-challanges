@@ -36,4 +36,4 @@ console.log(solutionOptimize(["P>E","E>R","R>U"])); // PERU
 console.log(solutionOptimize(["I>N","A>I","P>A","S>P"])); // SPAIN
 console.log(solutionOptimize(["I>F", "W>I", "S>W", "F>T"]));
 console.log(solutionOptimize(["R>T", "A>L", "P>O", "O>R", "G>A", "T>U"])) // PORTUGAL
-console.log(solutionOptimize(["W>I", "R>L", "T>Z", "Z>E", "S>W", "E>R", "L>A", "A>N", "N>D", "I>T"]))
+// console.log(solutionOptimize(["W>I", "R>L", "T>Z", "Z>E", "S>W", "E>R", "L>A", "A>N", "N>D", "I>T"]))
