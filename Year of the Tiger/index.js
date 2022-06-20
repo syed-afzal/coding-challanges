@@ -26,4 +26,20 @@ const Solution = (T) => {
   return output;
 }
 
-console.log(Solution(["aab", "cab", "baa", "baa"]))
+// console.log(Solution(["aab", "cab", "baa", "baa"]))
+
+// if (obj[199]) {
+//   console.log('done')
+// }
+
+let dateTimeArray = obj.map((o,i) => {
+  if (obj[i+1]) {
+    return {
+      x: o['node'].start_time,
+      y: moment.utc(moment(o['node'].start_time)
+        .diff(moment(obj[i+1]['node'].start_time)))
+        .format("HH:mm:ss")
+    }
+  }
+})
+console.log(dateTimeArray);
