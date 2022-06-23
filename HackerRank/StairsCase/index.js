@@ -1,4 +1,4 @@
-function stairsCase(n) {
+const stairsCase = (n) => {
   for (let i = 1; i <= n; i++) {
     let stairs = "";
     for (let j = n; j > 0; j--) {
