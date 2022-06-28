@@ -13,3 +13,4 @@ function biggerIsGreater(w) {
   }
   console.log(result);
 }
+biggerIsGreater('hefg');
