@@ -15,3 +15,5 @@ const stairsCase = (n) => {
 }
 
 stairsCase(6);
+stairsCase(10);
+stairsCase(11);
