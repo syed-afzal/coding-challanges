@@ -1,4 +1,4 @@
-function biggerIsGreater(w) {
+const biggerIsGreater =(w) => {
   // Write your code here
   let sorted = w.split('').sort();
   let result = sorted.slice();
