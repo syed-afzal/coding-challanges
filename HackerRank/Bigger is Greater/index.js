@@ -1,5 +1,4 @@
 const biggerIsGreater =(w) => {
-  let orignal = w;
   // Write your code here
   let isFound = false;
   w = w.split('');
@@ -15,7 +14,9 @@ const biggerIsGreater =(w) => {
     }
     currentItemIndex = isFound ? currentItemIndex : currentItemIndex - 1;
   }
+  console.log(i);
   let substring = w.slice(i+1, w.length).sort().join('');
+  return w.slice(0, i+1).join('') + substring;
 }
 biggerIsGreater('abcd');
 biggerIsGreater('dkhc');
