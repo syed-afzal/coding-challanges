@@ -45,7 +45,40 @@ const biggerIsGreater =(w) => {
 }
 
 
+// console.log(biggerIsGreater('hefg'));
+// console.log(biggerIsGreater('dkhc'));
+// console.log(biggerIsGreater('zyyyvvvvvuttsrqqokjjheedccb'));
+// console.log(biggerIsGreater('vvvygfabrsqeitgelpxwodhdfyypoyufxnecmrtkbzbhzfbtvnffcmikqoosfzoozssonomkgmtdqfecrqtps'));
+
+const biggerIsGreaterTwo = (w) => {
+  // Write your code here
+  w = w.split('');
+  let endIndex;
+
+  for(endIndex = w.length - 1; endIndex > 0; endIndex--) {
+    if(w[endIndex].localeCompare(w[endIndex -1]) > 0) {
+      break;
+    }
+  }
+  if(endIndex === 0) {
+    return 'no answer'
+  } else {
+    let firstSmallChar = w[endIndex-1];
+    let nextSmallChar = endIndex;
+
+    for(let startIndex = endIndex + 1; startIndex < w.length; startIndex++) {
+      if(w[startIndex] > firstSmallChar && w[startIndex] < w[nextSmallChar]) {
+        nextSmallChar = startIndex;
+      }
+    }
+    [w[endIndex-1] , w[nextSmallChar]] = [w[nextSmallChar] , w[endIndex - 1]];
+
+    let subString =  w.slice(endIndex).sort().join('');
+    return w.slice(0, endIndex).join('') + subString;
+  }
+}
+
+console.log(biggerIsGreaterTwo('ecdigf'));
 console.log(biggerIsGreater('hefg'));
 console.log(biggerIsGreater('dkhc'));
 console.log(biggerIsGreater('zyyyvvvvvuttsrqqokjjheedccb'));
-console.log(biggerIsGreater('vvvygfabrsqeitgelpxwodhdfyypoyufxnecmrtkbzbhzfbtvnffcmikqoosfzoozssonomkgmtdqfecrqtps'));
