@@ -14,9 +14,13 @@ const biggerIsGreater =(w) => {
     }
     currentItemIndex = isFound ? currentItemIndex : currentItemIndex - 1;
   }
-  console.log(i);
-  let substring = w.slice(i+1, w.length).sort().join('');
-  return w.slice(0, i+1).join('') + substring;
+  if (!isFound)
+    console.log('no answer');
+  else {
+    let substring = w.slice(i+1, w.length).sort().join('');
+    console.log(w.slice(0, i+1).join('') + substring);
+  }
 }
 biggerIsGreater('abcd');
 biggerIsGreater('dkhc');
+biggerIsGreater('dcba');
