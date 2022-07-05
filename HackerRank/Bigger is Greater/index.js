@@ -47,4 +47,5 @@ const biggerIsGreater =(w) => {
 
 console.log(biggerIsGreater('hefg'));
 console.log(biggerIsGreater('dkhc'));
-console.log(biggerIsGreater('dcba'));
+console.log(biggerIsGreater('zyyyvvvvvuttsrqqokjjheedccb'));
+console.log(biggerIsGreater('vvvygfabrsqeitgelpxwodhdfyypoyufxnecmrtkbzbhzfbtvnffcmikqoosfzoozssonomkgmtdqfecrqtps'));
