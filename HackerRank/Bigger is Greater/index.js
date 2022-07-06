@@ -81,4 +81,3 @@ const biggerIsGreaterTwo = (w) => {
 console.log(biggerIsGreaterTwo('ecdigf'));
 console.log(biggerIsGreater('hefg'));
 console.log(biggerIsGreater('dkhc'));
-console.log(biggerIsGreater('zyyyvvvvvuttsrqqokjjheedccb'));
