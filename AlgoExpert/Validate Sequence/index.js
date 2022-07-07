@@ -1,4 +1,4 @@
-function isValidSubsequence(array, sequence) {
+const isValidSubsequence = (array, sequence) => {
   // Write your code here.
   let subIndex = 0;
   for (let index = 0; index < array.length; index++) {
