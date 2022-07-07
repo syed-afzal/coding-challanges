@@ -6,6 +6,9 @@ const lengthOfLongestSubstring = (s) => {
   while(end < s.length) {
     if (map[s[end]] !== undefined) {
       result = Math.max(result, end - start);
+      for (let i=start; i<map[s[end]]; i++) {
+        delete map[s[i]];
+      }
       start = map[s[end]] + 1;
       map[s[end]] = end;
     } else {
@@ -14,7 +17,7 @@ const lengthOfLongestSubstring = (s) => {
     end++;
   }
   result = Math.max(result, end - start);
-  console.log(result)
+  return result;
 }
 
 console.log(lengthOfLongestSubstring('abcabcbb'));
@@ -22,3 +25,4 @@ console.log(lengthOfLongestSubstring('pwwkew'));
 console.log(lengthOfLongestSubstring('bbbbb'));
 console.log(lengthOfLongestSubstring(' '));
 console.log(lengthOfLongestSubstring('dvdf'));
+console.log(lengthOfLongestSubstring('abba'));
