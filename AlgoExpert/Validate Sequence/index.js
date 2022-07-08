@@ -1,7 +1,7 @@
 const isValidSubsequence = (array, sequence) => {
   // Write your code here.
   let subIndex = 0;
-  for (let index = 0; index < array.length; index++) {
+  for (let index = 0; index < array.length && subIndex < sequence.length; index++) {
     if(sequence[subIndex] === array[index]) {
       subIndex++;
     }
