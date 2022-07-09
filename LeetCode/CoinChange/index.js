@@ -6,7 +6,6 @@ var coinChange = function(coins, amount) {
   let array = Array(arbitaryVal).fill(arbitaryVal);
   array[0] = 0;
 
-  console.log(amount, coins.length);
   for(let i=1; i<= amount; i++) {
     for (let coin = 0; coin < coins.length; coin++) {
       let cacheValue = i - coins[coin] ;
@@ -16,7 +15,6 @@ var coinChange = function(coins, amount) {
       }
     }
   }
-  console.log(array);
   return array[array.length-1];
 };
 
