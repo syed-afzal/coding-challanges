@@ -9,7 +9,6 @@ var coinChange = function(coins, amount) {
   for(let i=1; i<= amount; i++) {
     for (let coin = 0; coin < coins.length; coin++) {
       let cacheValue = i - coins[coin] ;
-      console.log(cacheValue, coins[coin]);
       if(cacheValue >= 0) {
         array[i] = Math.min(array[cacheValue]+1, array[i])
       }
