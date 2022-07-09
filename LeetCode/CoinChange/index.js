@@ -17,6 +17,7 @@ var coinChange = function(coins, amount) {
     }
   }
   console.log(array);
+  return array[array.length-1];
 };
 
 coinChange([1, 2, 5], 11);
