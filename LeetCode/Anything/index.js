@@ -30,4 +30,17 @@ const encode = (array) => {
  return result;
 }
 
-console.log(encode(array));
+const encoded = encode(array);
+
+const decode = (encode) => {
+  let result = [];
+  while(encode.length > 0) {
+    result.push({
+      id: encode.pop(),
+      edges: []
+    });
+  }
+  return result;
+}
+
+console.log(decode(encoded));
