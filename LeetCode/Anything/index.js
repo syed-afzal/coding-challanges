@@ -30,8 +30,6 @@ const encode = (array) => {
  return result;
 }
 
-const encoded = encode(array);
-
 const decode = (encode) => {
   let result = [];
   while(encode.length > 0) {
