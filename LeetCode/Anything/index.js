@@ -30,15 +30,23 @@ const encode = (array) => {
  return result;
 }
 
+const encoded = encode(array);
+
 const decode = (encode) => {
-  let result = [];
-  while(encode.length > 0) {
-    result.push({
-      id: encode.pop(),
-      edges: []
-    });
+  if (encode.length === 0) return;
+  let result = {
+    id: encode.shift(),
+    edges: {},
   }
-  return result;
+  let ref = result;
+  while(encode.length > 0) {
+    ref.edges = {
+      id: encode.shift(),
+      edges: []
+    };
+    ref = ref.edges;
+  }
+  console.log(result)
 }
 
 console.log(decode(encoded));
