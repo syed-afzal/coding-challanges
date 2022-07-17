@@ -46,7 +46,7 @@ const decode = (encode) => {
     };
     ref = ref.edges;
   }
-  console.log(result)
+  return result;
 }
 
 console.log(decode(encoded));
