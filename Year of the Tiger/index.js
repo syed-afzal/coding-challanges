@@ -1,3 +1,4 @@
+const moment = require('moment');
 const swapLetters = (t) => {
   return {
     t,
@@ -1646,3 +1647,21 @@ let dateTimeArray = obj.map((o,i) => {
   }
 })
 console.log(dateTimeArray);
+
+
+const DATE_FORMATTER = 'DD/MM/YYYY';
+function dateFormater(str) {
+  if (!str) {
+    return null;
+  }
+  /* eslint-disable */
+  const [dd, mm, yyyy] = str.split(/(\-|\/)/g).filter((a) => {
+    // @ts-ignore
+    return !isNaN(a);
+  });
+  return `${+dd < 10 ? `0${+dd}` : dd}/${+mm < 10 ? `0${+mm}` : mm}/${yyyy}`;
+  /* eslint-enable */
+}
+console.log(dateFormater('15/07/2020'));
+console.log(moment('15/07/202', DATE_FORMATTER, true))
+const startFrom = moment('15/07/202', DATE_FORMATTER, true) > moment('15/07/2022', DATE_FORMATTER, true);
