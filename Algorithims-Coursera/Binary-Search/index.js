@@ -18,3 +18,17 @@ const BinarySearch = (arr, search) => {
 }
 
 console.log(BinarySearch([1,2,3,4,5,6,7,8,9,10], 98));
+
+const BinarySearchRecursive = (arr, search, low, high) => {
+  if (low > high) return false;
+  let middle = Math.floor((low+high)/2);
+  if (search > arr[middle])
+    return BinarySearchRecursive(arr, search, middle+1, high);
+  else if(search <arr[middle])
+    return BinarySearchRecursive(arr,  search, low,  middle-1);
+  else
+    return middle;
+}
+
+let arr = [1,2,3,4,5,6,7,8,9,10];
+console.log(BinarySearchRecursive(arr, 7, 0, arr.length - 1));
