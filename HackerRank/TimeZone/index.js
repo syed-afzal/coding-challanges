@@ -1,4 +1,4 @@
-function timeConversion(s) {
+const timeConversion = (s) => {
   // Write your code here
   const [hours, minutes, second] = s.split(':')
   if(second.includes('AM')){
