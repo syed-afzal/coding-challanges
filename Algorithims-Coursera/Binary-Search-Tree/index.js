@@ -26,7 +26,7 @@ root = insert(root, 23);
 root = insert(root, 27);
 root = insert(root, 21);
 root = insert(root, 9);
-root = insert(root, 4);
+root = insert(root, 3);
 
 console.log(root);
 
