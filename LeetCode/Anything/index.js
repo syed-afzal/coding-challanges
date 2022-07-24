@@ -50,3 +50,15 @@ const decode = (encode) => {
 }
 
 console.log(decode(encoded));
+
+const traversing = (arr) => {
+
+  if (arr[0].edges.length > 0){
+    console.log(arr[0].id);
+    return traversing(arr[0].edges)
+  } else {
+    console.log(arr[0].id);
+  }
+}
+
+traversing(array);
