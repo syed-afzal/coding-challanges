@@ -31,3 +31,16 @@ root = insert(root, 3);
 console.log(root);
 
 
+const inOrderTraversal = (root) => {
+  if (!root)
+    return;
+
+  inOrderTraversal(root.left);
+
+  console.log(root.value);
+
+  inOrderTraversal(root.right);
+}
+
+inOrderTraversal(root);
+
