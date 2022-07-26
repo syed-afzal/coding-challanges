@@ -44,3 +44,14 @@ const inOrderTraversal = (root) => {
 
 inOrderTraversal(root);
 
+const preOrderTraversal = (root) => {
+  if (!root)
+    return;
+
+  console.log(root.value);
+
+  inOrderTraversal(root.left);
+
+  inOrderTraversal(root.right);
+}
+
