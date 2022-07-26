@@ -42,7 +42,7 @@ const inOrderTraversal = (root) => {
   inOrderTraversal(root.right);
 }
 
-inOrderTraversal(root);
+// inOrderTraversal(root);
 
 const preOrderTraversal = (root) => {
   if (!root)
@@ -55,3 +55,23 @@ const preOrderTraversal = (root) => {
   inOrderTraversal(root.right);
 }
 
+const inOrderTraversalWithoutRecursion = (root) => {
+  if(!root)
+    return;
+
+  let stack = [];
+  let current = root;
+
+  while(current || stack.length > 0) {
+    if(!current) {
+      let node = stack.pop();
+      console.log(node.value);
+      current = node.right;
+    } else {
+      stack.push(current);
+      current = current.left;
+    }
+  }
+}
+
+inOrderTraversalWithoutRecursion(root);
