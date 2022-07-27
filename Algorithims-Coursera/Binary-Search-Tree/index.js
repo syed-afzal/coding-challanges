@@ -50,10 +50,12 @@ const preOrderTraversal = (root) => {
 
   console.log(root.value);
 
-  inOrderTraversal(root.left);
+  preOrderTraversal(root.left);
 
-  inOrderTraversal(root.right);
+  preOrderTraversal(root.right);
 }
+
+preOrderTraversal(root);
 
 const inOrderTraversalWithoutRecursion = (root) => {
   if(!root)
@@ -74,4 +76,25 @@ const inOrderTraversalWithoutRecursion = (root) => {
   }
 }
 
-inOrderTraversalWithoutRecursion(root);
+// inOrderTraversalWithoutRecursion(root);
+
+const preOrderTraversalWithoutRecursion = (root) => {
+  if (!root)
+    return;
+
+  let stack = [];
+  let current = root;
+
+  while (current || stack.length > 0) {
+    if (current){
+      console.log(current.value);
+      stack.push(current);
+      current = current.left;
+    } else {
+      let node = stack.pop();
+      current = node.right;
+    }
+  }
+}
+
+preOrderTraversalWithoutRecursion(root);
