@@ -30,7 +30,6 @@ root = insert(root, 3);
 
 console.log(root);
 
-
 const inOrderTraversal = (root) => {
   if (!root)
     return;
@@ -55,7 +54,7 @@ const preOrderTraversal = (root) => {
   preOrderTraversal(root.right);
 }
 
-preOrderTraversal(root);
+// preOrderTraversal(root);
 
 const inOrderTraversalWithoutRecursion = (root) => {
   if(!root)
@@ -97,4 +96,28 @@ const preOrderTraversalWithoutRecursion = (root) => {
   }
 }
 
-preOrderTraversalWithoutRecursion(root);
+// preOrderTraversalWithoutRecursion(root);
+
+// Assume that the tree is a binary search tree.
+const minimumValue = (root) => {
+  if (!root)
+    return;
+
+    // with Recursive Approach
+
+    // let current = root;
+    // if(current.left)
+    //   return minimumValue(current.left);
+    // else
+    //   return current.value;
+
+    // with Iterative Approach
+
+  let current = root;
+  while(current.left) {
+      current = current.left;
+    }
+    return current.value;
+}
+
+console.log(minimumValue(root));
