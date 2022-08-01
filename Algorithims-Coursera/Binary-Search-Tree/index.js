@@ -27,6 +27,8 @@ root = insert(root, 27);
 root = insert(root, 21);
 root = insert(root, 9);
 root = insert(root, 3);
+// root = insert(root, 4);
+// root = insert(root, 6);
 
 console.log(root);
 
@@ -120,4 +122,16 @@ const minimumValue = (root) => {
     return current.value;
 }
 
-console.log(minimumValue(root));
+const deleteMinimum = (root) => {
+  if (!root)
+    return;
+
+  if (root.left){
+    root.left = deleteMinimum(root.left);
+    return root;
+  } else {
+    return root.right;
+  }
+}
+
+console.log(deleteMinimum(root));
