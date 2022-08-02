@@ -26,9 +26,12 @@ root = insert(root, 23);
 root = insert(root, 27);
 root = insert(root, 21);
 root = insert(root, 9);
-root = insert(root, 3);
-// root = insert(root, 4);
-// root = insert(root, 6);
+// root = insert(root, 3);
+root = insert(root, 4);
+root = insert(root, 6);
+root = insert(root, 26);
+root = insert(root, 28);
+root = insert(root, 26.5);
 
 console.log(root);
 
@@ -122,6 +125,8 @@ const minimumValue = (root) => {
     return current.value;
 }
 
+// console.log(minimumValue(root));
+
 const deleteMinimum = (root) => {
   if (!root)
     return;
@@ -132,6 +137,46 @@ const deleteMinimum = (root) => {
   } else {
     return root.right;
   }
+};
+
+const deleteMaximum = (root) => {
+  if (!root)
+    return;
+
+  if (root.right){
+    root.right = deleteMaximum(root.right);
+    return root;
+  } else {
+    return root.left;
+  }
 }
 
-console.log(deleteMinimum(root));
+// console.log(deleteMinimum(root));
+// console.log(deleteMaximum(root));
+
+const deleteWithKey = (root, val) => {
+  if (!root)
+    return;
+
+  if (val < root.value){
+    root.left = deleteWithKey(root.left,  val);
+    return root;
+  } else if (val > root.value) {
+    root.right = deleteWithKey(root.right,  val);
+    return root;
+  } else {
+    if(root.right === null)
+      return root.left;
+    if (root.left === null)
+      return root.right;
+
+
+    root.value = minimumValue(root.right);
+    deleteMinimum(root.right);
+  }
+  return root;
+}
+
+console.log(deleteWithKey(root, 23));
+
+// inOrderTraversalWithoutRecursion(root);
