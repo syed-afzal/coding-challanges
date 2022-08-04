@@ -179,4 +179,4 @@ const deleteWithKey = (root, val) => {
 
 console.log(deleteWithKey(root, 23));
 
-// inOrderTraversalWithoutRecursion(root);
+inOrderTraversalWithoutRecursion(root);
