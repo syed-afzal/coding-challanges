@@ -6,8 +6,9 @@ const removeDuplicatesArray = (array) => {
 
   let j = 0;
   for (let i=0; i < array.length - 1; i++) {
-    if (array[i+1] !== array[j])
-      array[j++] = array[i+1];
+    if (array[i] !== array[i+1]) {
+      array[j++] = array[i];
+    }
   }
   array[j++] = array[array.length -1];
   return j;
@@ -15,7 +16,7 @@ const removeDuplicatesArray = (array) => {
 
 console.log(removeDuplicatesArray([1,1,2,3,4,4,5]))
 
-var obj = { first: "John", last: "Doe" };
+// var obj = { first: "John", last: "Doe" };
 //
 // for(let [key,value] of Object.entries(obj)) {
 //   console.log(key,  value);
