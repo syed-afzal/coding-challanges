@@ -1,8 +1,7 @@
 const removeDuplicatesArray = (array) => {
-  // console.log(array)
-  // return array.filter(
-  //   (element,  idx) => array.indexOf(element) === idx
-  // )
+  return array.filter(
+    (element,  idx) => array.indexOf(element) === idx
+  )
 
   let j = 0;
   for (let i=0; i < array.length - 1; i++) {
