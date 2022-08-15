@@ -1,4 +1,4 @@
-var romanToInt = function(s) {
+const romanToInt = (s) => {
   const dictionary = {
     'I':1,
     'V':5,
