@@ -19,6 +19,9 @@ const romanToInt = (s) => {
       idx++;
     }
   }
+  console.log(output)
 };
 romanToInt('IV');
 romanToInt('LVIII');
+romanToInt('XXV');
+romanToInt('MCMXCIV');
