@@ -6,10 +6,10 @@ const diagonalDifference = (arr) => {
   }
   console.log(leftSum, rightSum);
 
-  const numbers = [...Array(arr.length).keys()];
-  const leftDiagonalSum = numbers.reduce((acc, val) => acc+arr[val][val], 0);
-  const rightDiagonalSum = numbers.reduce((acc, val) => acc+arr[val][(arr.length-1)-val], 0);
-  console.log(Math.abs(leftDiagonalSum - rightDiagonalSum));
+  // const numbers = [...Array(arr.length).keys()];
+  // const leftDiagonalSum = numbers.reduce((acc, val) => acc+arr[val][val], 0);
+  // const rightDiagonalSum = numbers.reduce((acc, val) => acc+arr[val][(arr.length-1)-val], 0);
+  // console.log(Math.abs(leftDiagonalSum - rightDiagonalSum));
 }
 diagonalDifference([
   [ 11, 2, 4 ],
