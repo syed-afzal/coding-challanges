@@ -16,3 +16,9 @@ diagonalDifference([
   [ 4, 5, 6 ],
   [ 10, 8, -12 ]
 ]);
+
+diagonalDifference([
+  [ 34, 2, 4 ],
+  [ 78, -5, 6 ],
+  [ 22, 8, -12 ]
+]);
