@@ -1646,10 +1646,11 @@ let dateTimeArray = obj.map((o,i) => {
     }
   }
 })
-console.log(dateTimeArray);
+// console.log(dateTimeArray);
 
 
 const DATE_FORMATTER = 'DD/MM/YYYY';
+const DATE_TIME_FORMATTER = 'DD/MM/YYYY HH:mm:ss';
 function dateFormater(str) {
   if (!str) {
     return null;
@@ -1662,6 +1663,26 @@ function dateFormater(str) {
   return `${+dd < 10 ? `0${+dd}` : dd}/${+mm < 10 ? `0${+mm}` : mm}/${yyyy}`;
   /* eslint-enable */
 }
-console.log(dateFormater('15/07/2020'));
-console.log(moment('15/07/202', DATE_FORMATTER, true))
-const startFrom = moment('15/07/202', DATE_FORMATTER, true) > moment('15/07/2022', DATE_FORMATTER, true);
+
+function dateTimeFormatter(str) {
+  if (!str) {
+    return null;
+  }
+  const [dd, mm, yyyy, HH, MM, SS] = str.split(/(\-|\/|\s|\:)/g).filter((a) => {
+    a = a.trim();
+    return a && !isNaN(a);
+  });
+  return `${+dd < 10 ? `0${+dd}` : dd}/${+mm < 10 ? `0${+mm}` : mm}/${yyyy} ${+HH < 10 ? `0${+HH}` : HH}:${+MM < 10 ? `0${+MM}` : MM}:${+SS < 10 ? `0${+SS}` : SS}`;
+  /* eslint-enable */
+}
+console.log(moment(dateTimeFormatter('12/07/2021 21:36:00'), 'DD/MM/YYYY HH:mm:ss', true).isValid());
+// console.log(moment('15/01/2021', DATE_FORMATTER, true).isValid())
+// console.log(moment('15/01/2021', DATE_FORMATTER, true).isValid())
+// console.log(moment().format('DD/MM/YYYY HH:mm:ss'));
+// console.log(moment('23/08/2022 13:26:15', 'DD/MM/YYYY HH:mm:ss', true).isValid());
+// console.log(moment('15/01/2021 13:21:46', 'YYYY-MM-DD HH:mm:ss', true).format('YYYY-MM-DD HH:mm:ss'));
+// const startFrom = moment('15/07/202', DATE_FORMATTER, true) > moment('15/07/2022', DATE_FORMATTER, true);
+
+const isValid = moment(dateTimeFormatter('15/09/2022 21:56:00'), DATE_TIME_FORMATTER, true) >
+  moment(dateTimeFormatter('15/09/2022 21:36:00'), DATE_TIME_FORMATTER, true);
+console.log(isValid);

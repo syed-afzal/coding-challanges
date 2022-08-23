@@ -49,7 +49,7 @@ const decode = (encode) => {
   return result;
 }
 
-console.log(decode(encoded));
+// console.log(decode(encoded));
 
 const traversing = (arr) => {
 
@@ -61,4 +61,47 @@ const traversing = (arr) => {
   }
 }
 
-traversing(array);
+// traversing(array);
+
+// if (validate === 'required_without') {
+//   if (
+//     !record[field].value &&
+//     !fields.some((fld: string) => record[fld] && record[fld].value)
+//   ) {
+//     [...fields, field].forEach((key) => {
+//       record[key].errorMessage = error;
+//     });
+//     break;
+//   } else {
+//     [...fields, field].forEach((key) => {
+//       record[key].errorMessage = '';
+//     });
+//   }
+// }
+
+const obj2 = {
+  worker:1,
+  crew:2,
+  // zone:'ad',
+  // floor:'type',
+  // locationGroup:'type',
+};
+
+const obj3 = {
+  'll':'a'
+}
+
+const obj = {
+  id:1,
+  email:''
+}
+
+const fields = ['worker', 'crew'];
+const fields2 = ['zone', 'floor', 'locationGroup'];
+// console.log(
+//   obj['id'] && fields.every(fld => obj[fld]) || !obj['id'] && fields.every(fld => !obj[fld])
+// );
+
+let len = fields.filter(fld => obj2[fld]).length;
+console.log(len);
+console.log(5 !== 1);
