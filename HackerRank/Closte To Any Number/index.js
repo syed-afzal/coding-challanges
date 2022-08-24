@@ -1,4 +1,4 @@
-function closeToZero (arr) {
+const closeToZero = (arr) => {
     if (arr.length < 1)
         return 0;
 
