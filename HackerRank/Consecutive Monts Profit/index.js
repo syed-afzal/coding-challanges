@@ -16,7 +16,9 @@ const consecutiveMonthsProfit = (arr) => {
       end++;
     }
   }
-   console.log(output);
+  // console.log(maxProfit);
+  // console.log(output);
+  return output[maxProfit];
 }
 
 console.log(consecutiveMonthsProfit([-1, 9, 0, 8, -5, 6, -24]))
