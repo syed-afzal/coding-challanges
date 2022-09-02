@@ -1675,14 +1675,53 @@ function dateTimeFormatter(str) {
   return `${+dd < 10 ? `0${+dd}` : dd}/${+mm < 10 ? `0${+mm}` : mm}/${yyyy} ${+HH < 10 ? `0${+HH}` : HH}:${+MM < 10 ? `0${+MM}` : MM}:${+SS < 10 ? `0${+SS}` : SS}`;
   /* eslint-enable */
 }
-console.log(moment(dateTimeFormatter('12/07/2021 21:36:00'), 'DD/MM/YYYY HH:mm:ss', true).isValid());
-// console.log(moment('15/01/2021', DATE_FORMATTER, true).isValid())
+// console.log(dateTimeFormatter('01/01/2020 00-00-00'));
+
+// console.log(moment(dateTimeFormatter('12/07/2021 21/36/45'), DATE_TIME_FORMATTER, true).isValid());
+// console.log(moment('12/07/2021 21/36/45', DATE_TIME_FORMATTER, true).isValid());
+// console.log(moment('02/31/2021', DATE_FORMATTER, true).isValid())
+
 // console.log(moment('15/01/2021', DATE_FORMATTER, true).isValid())
 // console.log(moment().format('DD/MM/YYYY HH:mm:ss'));
 // console.log(moment('23/08/2022 13:26:15', 'DD/MM/YYYY HH:mm:ss', true).isValid());
 // console.log(moment('15/01/2021 13:21:46', 'YYYY-MM-DD HH:mm:ss', true).format('YYYY-MM-DD HH:mm:ss'));
 // const startFrom = moment('15/07/202', DATE_FORMATTER, true) > moment('15/07/2022', DATE_FORMATTER, true);
 
-const isValid = moment(dateTimeFormatter('15/09/2022 21:56:00'), DATE_TIME_FORMATTER, true) >
-  moment(dateTimeFormatter('15/09/2022 21:36:00'), DATE_TIME_FORMATTER, true);
-console.log(isValid);
+// const isValid = moment(dateTimeFormatter('12/08/2022 16:25:41'), DATE_TIME_FORMATTER, true) >
+//   moment(dateTimeFormatter('12/08/2022 13:25:41'), DATE_TIME_FORMATTER, true);
+// console.log(isValid);
+
+const convertSiteToUtcToday = (date) => {
+  if (date) {
+    return moment(date)
+      // .startOf('day')
+      .utc()
+      .format('YYYY-MM-DDTHH:mm:ss');
+  }
+  // return moment()
+  //   .startOf('day')
+  //   .utc()
+  //   .format('YYYY-MM-DDTHH:mm:ss');
+};
+
+const convertUtcTodayToSite = (date) => {
+  return moment(date);
+};
+
+const createDateWithDateFormatter = (date) => {
+  return moment(date)
+    .startOf('day')
+    .utc()
+    .format('YYYY-MM-DDTHH:mm:ss');
+};
+
+// console.log(convertUtcTodayToSite('12/08/2022 18:25:41'));
+
+console.log(convertSiteToUtcToday('12/08/2022 12:25:41'));
+console.log(convertSiteToUtcToday('12/08/2022 13:56:24'));
+
+console.log(moment('2022-12-08T07:25:41'))
+
+console.log(moment.utc().format())
+console.log(moment().format())
+console.log(moment().local().format())
