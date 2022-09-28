@@ -21,7 +21,7 @@ const encryption = (s) => {
 console.log(encryption('haveaniceday'));
 console.log(encryption('feedthedog'));
 console.log(encryption('chillout'));
-// console.log(encryption('iffactsdontfittotheorychangethefacts'));
+console.log(encryption('iffactsdontfittotheorychangethefacts'));
 
 
 
