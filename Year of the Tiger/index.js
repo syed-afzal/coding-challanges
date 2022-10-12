@@ -1679,9 +1679,20 @@ function dateTimeFormatter(str) {
 
 // console.log(moment(dateTimeFormatter('12/07/2021 21/36/45'), DATE_TIME_FORMATTER, true).isValid());
 // console.log(moment('12/07/2021 21/36/45', DATE_TIME_FORMATTER, true).isValid());
-// console.log(moment('02/31/2021', DATE_FORMATTER, true).isValid())
+// console.log(moment('02/31/2021', DATE_FORMATTER, true).isValid());
 
-// console.log(moment('15/01/2021', DATE_FORMATTER, true).isValid())
+// console.log('Validate', moment('15/01/0000', DATE_FORMATTER, true).isValid());
+// console.log(moment('22/10/0000', DATE_FORMATTER).isAfter(moment('01/01/1970', DATE_FORMATTER), 'year'));
+// console.log(moment('2010-10-20').isAfter('2010-10-19', 'year')); // true
+const MINIMUM_DATE = '01/01/2000';
+console.log(
+  moment(dateFormater('01/01/1999'), DATE_FORMATTER, true).isBefore(
+    MINIMUM_DATE,
+    'year',
+  ),
+);
+
+// console.log('IsAfter', moment('15/01/1978').isAfter('01/011970', 'year'));
 // console.log(moment().format('DD/MM/YYYY HH:mm:ss'));
 // console.log(moment('23/08/2022 13:26:15', 'DD/MM/YYYY HH:mm:ss', true).isValid());
 // console.log(moment('15/01/2021 13:21:46', 'YYYY-MM-DD HH:mm:ss', true).format('YYYY-MM-DD HH:mm:ss'));
@@ -1717,11 +1728,11 @@ const createDateWithDateFormatter = (date) => {
 
 // console.log(convertUtcTodayToSite('12/08/2022 18:25:41'));
 
-console.log(convertSiteToUtcToday('12/08/2022 12:25:41'));
-console.log(convertSiteToUtcToday('12/08/2022 13:56:24'));
-
-console.log(moment('2022-12-08T07:25:41'))
-
-console.log(moment.utc().format())
-console.log(moment().format())
-console.log(moment().local().format())
+// console.log(convertSiteToUtcToday('12/08/2022 12:25:41'));
+// console.log(convertSiteToUtcToday('12/08/2022 13:56:24'));
+//
+// console.log(moment('2022-12-08T07:25:41'))
+//
+// console.log(moment.utc().format())
+// console.log(moment().format())
+// console.log(moment().local().format())
