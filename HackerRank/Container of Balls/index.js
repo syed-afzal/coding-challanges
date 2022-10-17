@@ -10,8 +10,6 @@ const organizeContainers = (container) => {
   }
   rowSum.sort((a, b) => a - b);
   colSum.sort((a, b) => a - b);
-  console.log(rowSum.join(''));
-  console.log(colSum.join(''));
   return rowSum.join('') === colSum.join('') ? 'Possible' : 'Impossible';
 
 }
