@@ -7,20 +7,22 @@ const gridSearch = (G, P) => {
         for (let j = 0; j <= C - c; j++) {
             if (G[i][j] == P[0][0]) {
                 let found = true;
+                for (let k = 0; k < r; k++) {
+                    for (let l = 0; l < c; l++) {
+                        if (G[i + k][j + l] != P[k][l]) {
+                            found = false;
+                            break;
+                        }
+                    }
+                    if (!found) break;
+                }
+                if (found) return 'YES';
             }
         }
     }
     return 'NO';
 }
 
-// if(greenSignal && currentIndex > -1) {
-//   count++;
-// } else if(G[i].includes(P[count])){
-//   greenSignal = true;
-//   count++;
-// } else {
-//   count = 0;
-// }
 
 function indices(char, str) {
     let regex = new RegExp(char, 'g');
