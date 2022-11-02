@@ -1,11 +1,10 @@
 function flatten(value) {
-  let result =[];
-  while(value.length > 0) {
-    const val = value.shift()
-    if (Array.isArray(val)){
-      result.push(...val)
+  let result = [];
+  for (let i=0; i<value.length; i++){
+    if (Array.isArray(value[i])){
+      result = result.concat(flatten(value[i]))
     } else {
-      result.push(val);
+      result.push(value[i])
     }
   }
   return result;
@@ -22,4 +21,4 @@ flatten([
 ]); // [1, 2, 3, 4]
 
 // Flattens recursively
-// flatten([1, [2, [3, [4, [5]]]]]); // [1, 2, 3, 4, 5]
+flatten([1, [2, [3, [4, [5]]]]]); // [1, 2, 3, 4, 5]
