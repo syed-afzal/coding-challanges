@@ -9,15 +9,21 @@ const findMaxLength = (nums) => {
       else currentZero++;
 
       if (currentZero === currentOne){
-        if (lastSameCountIndex < -1){
-          lastSameCountIndex = j;
-          count += currentOne + currentZero;
-        } else if (lastSameCountIndex )
+        if((currentZero+currentOne) > count){
+          count = currentZero + currentOne;
+          lastSameCountIndex = i;
+          break;
+        }
+        if (j <= lastSameCountIndex) break;
+        lastSameCountIndex = i;
+        count += currentZero + currentOne;
       }
     }
   }
 
-  console.log(allZeros);
-  console.log(allOnes);
+  console.log(count);
 }
 findMaxLength([0,0,1,0,1,0,0]);
+findMaxLength([0,1,0]);
+findMaxLength([0,0,0,1,1,1,0]);
+findMaxLength([0,0,1,0,0,0,1,1])
