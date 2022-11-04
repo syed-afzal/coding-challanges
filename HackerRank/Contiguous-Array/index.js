@@ -8,7 +8,6 @@ const maxSubArraySum = (arr) => {
 
   let maxSum = 0;
   let tempSum = 0;
-  let startIndex = 0, endIndex = 0;
   for (let i=0; i<arr.length; i++) {
     tempSum += arr[i];
     if (tempSum > maxSum){
