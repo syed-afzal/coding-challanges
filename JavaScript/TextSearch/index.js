@@ -8,9 +8,9 @@ const textSearch = (string, query) => {
   //   }
   // }
 
-  if (query.length < 1) return str;
+  if (query.length < 1) return string;
   const regex = new RegExp(query, 'gi')
-  return str.length > 0 ? str.replace(regex, `<b>${query}</b>`) : str;
+  return string.length > 0 ? str.replace(regex, `<b>${query}</b>`) : string;
 }
 
 // console.log(textSearch('The Quick Brown Fox Jumps Ov/er The Lazy Dog, hence Fox', 'Fox'));
